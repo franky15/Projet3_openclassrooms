@@ -1,0 +1,94 @@
+
+.logo {
+    width: 50%;
+    height: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        @include police-logo;
+        font-size: 24px;
+    }
+    
+}
+.contener-form {
+    width: 100%;
+    height: 50px;
+    margin-bottom: -10px;
+    background-color: $background-form;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset -2px 1px 6px  rgba(0, 0, 0, 0.3);
+    
+}
+.form {
+    width: 22%;
+    height: 20px;
+    display: flex;
+    background-color: $background-form;
+    &__label {
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: calc(1vw + 5px);
+        }
+    }
+    &__input {
+        width: 85%;
+        background-color: #eaeaea;
+        border: solid #eaeaea;
+        &::placeholder {
+            color: black;
+            font-weight: bold;
+            font-size: calc(2vw + 1.5px); /*calc(2vw + 1px)*/
+        }
+    }
+}
+.contener-info {
+    width: 100%;
+    height: auto; /*290px*/
+    background-color: $background-conteneurinfo;
+}
+.action {
+    width: 100%; /*45%*/
+    height: auto;
+    margin: auto;
+    margin-top: calc(2vw); /*20px*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+     h2 {
+        font-weight: bold;
+        font-size: calc(2vw + 12px);
+    }
+    p {
+        font-weight: lighter;
+        font-size: 16px;
+        opacity: 0.5;
+    }
+    &__titre {
+        
+        width: 70%;
+        margin: auto;
+        margin-top: 8px;
+
+        position: relative;
+        top: -45px;
+        text-align: center;
+    }
+    &__sous-titre1 {
+        position: relative;
+        top: -70px;
+    }
+    &__sous-titre2 {
+        position: relative;
+        top: -100px;
+    }
+
+}
+ 

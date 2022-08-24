@@ -1,0 +1,22 @@
+
+    .btn-acceuil{
+        width: 100%;
+        position: relative;
+        top: -75px;
+        display: flex;
+        justify-content: center;
+        .btn-restaurant {
+            width: 230px;
+            height: 50px;
+            border-radius: 50px;
+            @include background-btn();
+            color: white;
+            font-size: 0.9rem; /*1.1em*/
+            transition: opacity 200ms;
+        }
+        .btn-restaurant:hover {
+            opacity: 0.8;
+        }
+        
+    }
+

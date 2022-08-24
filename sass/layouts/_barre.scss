@@ -1,0 +1,13 @@
+.titre-menu {
+    margin-top: -15px;
+    position: relative;
+    top: 20px;
+    &__bar {
+        width: 40px;
+        height: 3px;
+        background-color: $color-tertiaire;
+        position: relative;
+        top: -10px;
+    
+    } 
+}

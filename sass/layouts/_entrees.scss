@@ -1,0 +1,112 @@
+.entrees-contener1 {
+    width: 90%;
+    height: auto; /*400px*/
+    margin: auto;
+    margin-top: 25px;
+    .font-style {
+        font-weight: 100;
+    }
+}
+
+.sous-contener1 {
+    margin-top: 35px;
+    @for $i from 1 through 10 {
+       
+        .bloc /*#{$i}*/ {
+            animation: bloc 800ms $retard * $i backwards;
+            
+        }
+    }  
+}
+.plat-menu {
+    width: 90%;
+    height: auto; /*400px*/
+    margin: auto;
+    margin-top: 25px;
+    width: 100%;
+    height: 65px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    @include ombre();
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    &:hover {
+        .plat-menu__description {
+            animation: taille-description 1000ms ease-in-out;
+        }
+        .plat-menu__prix{
+            animation: prix 1000ms ease-in-out;
+        }
+        .check {
+            opacity: 1;
+            animation: check-panier 1000ms ease-in-out;
+        }
+    
+        .plat-menu__panier {
+            transform-origin: right;
+            animation: check-panier-bloc 1000ms ease-in-out;
+        }
+        
+    }
+    &__description {
+        width: 70%;
+        position: relative;
+        left: 10px;
+        h3 {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            position: relative;
+            top: -12px;
+        }
+        P {
+            font-weight: 100;
+            @include overflow-menu();
+            position: relative;
+            top: -25px;
+        }
+    }
+
+    &__prix {
+        width: 15%; 
+        display: flex;
+        justify-content: center;
+        
+        position: relative;
+        left: 20px;
+        p {
+            font-weight: 400;
+            position: relative;
+            top: 20px;
+        }
+    }
+    &__panier {
+        width: 15%;    
+        background-color: $color-tertiaire;
+        border-radius: 0px 15px 15px 0px;
+        position: relative;
+        left: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+        .check {
+            width: 20px;  
+            height: 20px;
+            border-radius: 100px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: rotate(-90deg);
+            img {
+                width: 14px;
+                filter: invert(95%) sepia(1%) saturate(7458%) hue-rotate(101deg) brightness(88%) contrast(100%);
+               
+            }
+        }
+    }
+} 

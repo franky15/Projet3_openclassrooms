@@ -1,0 +1,19 @@
+.btn {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    &__commander {
+        width: 200px;
+        height: 50px;
+        border-radius: 50px;
+        @include background-btn();
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        transition: opacity 200ms ;
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
