@@ -9,30 +9,69 @@
     width: 90%;
     margin: auto;
     padding-top: 30px;
-   
+    .restaurant-titre {
+        position: relative;
+        top: -10px;
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
 }
 .contener-restaurant__contener1 {
     width: 100%;
-    
+    height: 400px;
+    position: relative;
+    top: -10px;
+    @include tablette-only {
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    @include desktop-only {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 .contener-restaurant__contener2 {
     width: 100%;
-    
+    height: 400px;
+    position: relative;
+    top: -5px;
+    @include tablette-only {
+        
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    @include desktop-only {
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 .plat {
     position: relative;
     display: block;
     width: 100%;
-    height: 250px;
+    height: 48%;
     background-color: white;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-decoration: none;
     color: black;
+    @include tablette-only {
+        width: 49%; /*49%*/
+        height: 300px;
+    }
+    @include desktop-only {
+        width: 49%; /*49%*/
+        height: 300px;
+    }
     .plat__new {
         
-        width: 90px;
-        height: 30px;
+        width: 60px;
+        height: 20px;
         z-index: 1;
         display: flex;
         justify-content: center;
@@ -43,9 +82,17 @@
         top: 20px;
         border-radius: 2px;
         background-color: $background-new;
-        
+        @include tablette-only {
+            width: 90px;
+            height: 30px;
+        }
+        @include tablette-only {
+            
+        }
         p {
-            opacity: 0.3;
+            font-weight: 500;
+            font-size: 11px;
+            opacity: 0.4;
             
         }
     }
@@ -75,63 +122,23 @@
             width: 90%;
             height: 100%;
             h4 {
-                font-weight: bold;
+                font-weight: 500;
+                font-size: 14px;
                 position: relative;
                 top: -10px;
             }
             p {
-                font-weight: 100;
+                font-weight: 200;
+                font-size: 13px;
                 position: relative;
                 top: -25px;
             }
-           /* p {
-                position: absolute;
-                color: red;
-            }*/
         }
-        .coeur-trans {
-            width: 30px;
-        }
-        .coeur {
-            width: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-            .coeur-trans {
-                opacity: 1;
-                transition: opacity 0ms 100ms;
-            }
-            &:hover {
-                .coeur-trans{
-                    opacity: 0;
-                }
-                & p  {
-                    transform: scale(1);
-                }
-
-            }
-            }
-            .coeur-solid {
-                width: 30px;
-                height: 100%;
-                position: absolute;
-                z-index: -1;
-                transform: scale(0);
-                transition: transform 200ms;
-                .coeur-solid {
-                    width: 30px;
-                    filter: invert(74%) sepia(73%) saturate(4617%) hue-rotate(237deg) brightness(88%) contrast(94%);
-                    
-                }
-                
-            }
-          
-        }
-       
         
-    }
+    }  
+    }   
+
+    
 
 
  

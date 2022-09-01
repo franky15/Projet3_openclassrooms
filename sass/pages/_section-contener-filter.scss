@@ -1,31 +1,68 @@
 
-
+.contener-filter {
+    background-color: white;
+    height: 300px;
+    @include desktop-only {
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+}
 .filter {
     width: 90%;
-    height: 420px;
     margin: auto;
-   
+    @include desktop-only {
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
    
 }
 .filter__titre {
+    height: 50px;
     position: relative;
-    top: 15px;
+    top: 10px;
+    h3 {
+        font-size: 19px;
+        font-weight: 500;
+    }
+    @include desktop-only {
+        width: 12%;
+        height: 75px;
+        position: relative;
+        top: 0px;
+        display: flex;
+        align-items: center;
+    }
 }
 .filter__choice-bloc {
     width: 100%;
-    height: 300px;
+    height: 200px;
     position: relative;
-    top: 30px;
+    top: 0px;
+    @include desktop-only {
+        width: 87%;
+        height: 75px;
+        position: relative;
+        top: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 .choice {
     width: 100%;
-    height: 75px;
+    height: 55px;
     border-radius: 20px;
     margin-bottom: 20px;
     display: flex;
     background-color: #f6f6f6;
     box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.4);
-    
+    @include desktop-only {
+        width: 32%;
+        margin-bottom: 0px;
+    }
     &:hover {
         background-color: #f5edff;
         img {
@@ -40,13 +77,12 @@
         align-items: center;
         position: relative;
         left: -10px;
-        
         p {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
             background-color: $color-primaire;
             color: white;
-            font-size: 14px;
+            font-size: 11px;
             border-radius: 100px;
             display: flex;
             justify-content: center;
@@ -60,7 +96,7 @@
         align-items: center;
         
         img {
-            width: 20px;
+            width: 15px;
             opacity: 0.5;
             
         }

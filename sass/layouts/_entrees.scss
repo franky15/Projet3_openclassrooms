@@ -1,56 +1,101 @@
 .entrees-contener1 {
     width: 90%;
-    height: auto; /*400px*/
+    height: auto; /*250px*/
     margin: auto;
-    margin-top: 25px;
-    .font-style {
-        font-weight: 100;
+    .sous-contener1 {
+        position: relative;
+        top: 0px;
     }
+    .titre-menu {
+        position: relative;
+             top: -2px;
+        
+         p {
+             font-size: 13px;
+             font-weight: 300;
+             
+         }
+     }
 }
 
+
 .sous-contener1 {
-    margin-top: 35px;
+    flex-wrap: wrap;
     @for $i from 1 through 10 {
        
-        .bloc /*#{$i}*/ {
-            animation: bloc 800ms $retard * $i backwards;
+        .bloc#{$i} {
+            height: 65px;
             
+            animation: bloc 1000ms $retard * $i both;
+            @include desktop-only {
+                width: 32%;
+            }
         }
     }  
+    @include desktop-only {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+.plat-menu:visited {
+    color: black;
 }
 .plat-menu {
-    width: 90%;
-    height: auto; /*400px*/
-    margin: auto;
-    margin-top: 25px;
+    cursor: pointer;
     width: 100%;
-    height: 65px;
+    height: 55px;
     margin: auto;
-    margin-bottom: 20px;
     border-radius: 15px;
     @include ombre();
     display: flex;
     justify-content: space-between;
     background-color: white;
-    &:hover {
+    &:active {
+
         .plat-menu__description {
-            animation: taille-description 1000ms ease-in-out;
+             width: 50%;
         }
         .plat-menu__prix{
-            animation: prix 1000ms ease-in-out;
+            transform: translateX(-50px); 
+           
         }
         .check {
             opacity: 1;
-            animation: check-panier 1000ms ease-in-out;
+            transform: rotate(0deg);
+           
         }
     
         .plat-menu__panier {
-            transform-origin: right;
-            animation: check-panier-bloc 1000ms ease-in-out;
+            transform: scaleX(1);
+            
+           
         }
-        
     }
+   @include desktop-only {
+        &:hover {
+
+            .plat-menu__description {
+                 width: 50%;
+            }
+            .plat-menu__prix{
+                transform: translateX(-50px); 
+               
+            }
+            .check {
+                opacity: 1;
+                transform: rotate(0deg);
+               
+            }
+        
+            .plat-menu__panier {
+                transform: scaleX(1);
+            }
+        }
+    }
+    
     &__description {
+        transition: width 600ms ease-in-out;
         width: 70%;
         position: relative;
         left: 10px;
@@ -59,40 +104,51 @@
             text-overflow: ellipsis;
             overflow: hidden;
             position: relative;
-            top: -12px;
+            top: -5px;
+            font-weight: 400;
+            font-size: 14px;
         }
         P {
-            font-weight: 100;
+            
             @include overflow-menu();
             position: relative;
-            top: -25px;
+            top: -15px;
+            font-weight: 200;
+            font-size: 13px;
         }
     }
 
     &__prix {
+        transition: transform 600ms ease-in-out;
+        transform: translateX();
         width: 15%; 
         display: flex;
         justify-content: center;
-        
         position: relative;
         left: 20px;
         p {
-            font-weight: 400;
+            font-weight: bold;
             position: relative;
-            top: 20px;
+            top: 17px;
+            font-weight: 400;
+            font-size: 13px;
         }
     }
     &__panier {
+        transform-origin: right;
+        transition: transform 400ms ;
+        transform: scaleX(0);
         width: 15%;    
         background-color: $color-tertiaire;
         border-radius: 0px 15px 15px 0px;
         position: relative;
-        left: 2px;
+        left: 1px;
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: scale(0);
         .check {
+            transition: transform 400ms ease-in-out;
+            transform: rotate(-180deg);
             width: 20px;  
             height: 20px;
             border-radius: 100px;
@@ -101,11 +157,9 @@
             justify-content: center;
             align-items: center;
             opacity: 0;
-            transform: rotate(-90deg);
             img {
                 width: 14px;
                 filter: invert(95%) sepia(1%) saturate(7458%) hue-rotate(101deg) brightness(88%) contrast(100%);
-               
             }
         }
     }

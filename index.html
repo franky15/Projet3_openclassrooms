@@ -6,38 +6,43 @@
      
        <link rel="preconnect" href="https://fonts.googleapis.com">
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;700&family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
         
         <meta charset="utf-8" />
-
+        <meta name="viewport" content="width=device-width" />
+       <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">--> 
         <title>ohmyfood</title>
         
     </head>
     <body class="body-acceuil">
         <header class="header-acceuil">
-            <div class="logo"> <h1>ohmyfood</h1> </div>
+            <div class="logo-acceuil"> <p class="para-acceuil"><img src="./images/logo/ohmyfood.png" alt=""></p> </div>
             <div class="option-acceuil">
                     <div class="contener-form">
                         <form action="#" method="post" class="form">
-                            <label    for="form__input" class="form__label"> <img src="images/iconpng/location-dot-solid.svg" alt="#"> </label>
-                            <input type="text"   class="form__input" placeholder="Paris, belleville">
+                            <label    for="form__input" id="form__label"> <img src="images/iconpng/location-dot-solid.svg" alt="#" /> </label>
+                            <input type="text"   id="form__input" placeholder="Paris, belleville">
                         </form>
                     </div>
                    <div class="contener-info">
                         <div class="action">
-                            <h2>Réservez le menu qui</h2> 
                             <div class="action__titre">
-                                <h2>vous convient</h2>
+                                <h2>Réservez le menu qui</h2> 
+                                <div class="titre-contener2">
+                                    <h2>vous convient</h2>
+                                </div>
                             </div>
-                            <div class="action__sous-titre1">
-                                <p>Découvrez des restaurants d'exception,</p> 
-                            </div>
-                            <div class="action__sous-titre2">
-                                <p>sélectionnés par nos soins</p>
+                            <div class="action__sous-titre">
+                                <div class="sous-titre-contener1">
+                                    <p>Découvrez des restaurants d'exception,</p> 
+                                </div>
+                                <div class="sous-titre-contener2">
+                                    <p>sélectionnés par nos soins</p>
+                                </div>
                             </div>
                         </div>
                         <div class="btn-acceuil">
@@ -122,9 +127,6 @@
                 </div>
                 <div class="contener-restaurant__contener2">
                     <a href="alafrançaise.html" class="plat">
-                        <div class="plat__new">
-                            <p>Nouveau</p>
-                        </div> 
                         <div class="plat__img">
                             <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="#">
                         </div>
@@ -142,9 +144,6 @@
                         </div>
                     </a>
                     <a href="ledelicedessens.html" class="plat">
-                        <div class="plat__new">
-                            <p>Nouveau</p>
-                        </div>
                         <div class="plat__img">
                             <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="#">
                         </div>
@@ -167,10 +166,10 @@
         <footer>
             <div class="logo-footer"> <h1>ohmyfood </h1></div>
             <ul>
-                <li class="puce1"> <span class="span1"><img src="./images/iconpng/utensils.svg " alt="#"> </span> proposerun restaurant</li> 
-                <li class="puce1"><span class="span2"><img src="./images/iconpng/handshake.svg " alt="#"> </span>Devenir partenaire</li>
-                <li class="puce3">Mentions légales</li>
-                <li class="puce3">Contact</li>
+            <li class="puce1"> <span class="span1"><img src="./images/iconpng/utensils.svg " alt="#"> </span> <a href=""> proposerun restaurant</a></li> 
+            <li class="puce1"><span class="span2"><img src="./images/iconpng/handshake.svg " alt="#"> </span><a href="">Devenir partenaire</a></li>
+            <li class="puce3"><a href="">Mentions légales</a></li>
+            <li class="puce3"><a href="">Contact</a></li>
             </ul>
         </footer>
     </body>

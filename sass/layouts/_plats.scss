@@ -1,12 +1,20 @@
 .plat-contener2 {
     width: 90%;
-    height: auto; /*315px*/
+    height: auto; /*250px*/
     margin: auto;
-    .font-style {
-        font-weight: 100;
+   .sous-contener1 {
+        position: relative;
+        top: 0px;
     }
-    .sous-contener1 {
-        margin-top: 25px;
-    }
+    .titre-menu {
+        position: relative;
+             top: 0px;
+        
+         p {
+             font-size: 13px;
+             font-weight: 300;
+             
+         }
+     }
     
 }

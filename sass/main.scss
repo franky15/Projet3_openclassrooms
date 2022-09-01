@@ -1,6 +1,6 @@
 @import "./base/police";
 
-@import "./utils/medias";
+
 @import "./utils/mixin";
 @import "./utils/variables";
 @import "./utils/keyframes-spin";
@@ -15,14 +15,17 @@
 @import "./components/coeur";
 
 @import "./pages/header-acceuil";
+@import "./pages/logo-acceuil";
 @import "./pages/body-acceuil";
 @import "./pages/section-contener-filter";
 @import "./pages/section-restaurant";
 
 
 /****************************** pages secondaires ****************/
+
+
 @import "./utils/keyframes-menu-retard";
-@import "./utils/check-panier";
+
 
 @import "./layouts/header-menu";
 @import "./layouts/baner";

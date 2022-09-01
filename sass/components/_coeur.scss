@@ -1,16 +1,33 @@
 
-
+    .coeur-conten {
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+    }
     .coeur-trans{
         transition: opacity 100ms 200ms;
     }
-    .coeur-conten:hover {
-         .coeur-trans {
-    
+    .coeur-conten:active {
+        .coeur-trans {
             opacity: 0;
         }
         .coeur-solid-img {
             transform: scale(1);
         }
+    }
+    @include desktop-only {
+        .coeur-conten:hover {
+            .coeur-trans {
+               opacity: 0;
+           }
+           .coeur-solid-img {
+               transform: scale(1);
+           }
+       }
     }
     img {
         width: 100%;
