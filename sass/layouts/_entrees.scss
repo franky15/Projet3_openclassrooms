@@ -93,10 +93,9 @@
             }
         }
     }
-    
     &__description {
         transition: width 600ms ease-in-out;
-        width: 70%;
+        width: 60%;
         position: relative;
         left: 10px;
         h3 {
@@ -115,23 +114,25 @@
             top: -15px;
             font-weight: 200;
             font-size: 13px;
+            padding-right: 20px;
         }
     }
 
     &__prix {
         transition: transform 600ms ease-in-out;
-        transform: translateX();
-        width: 15%; 
+        
+        width: auto;
         display: flex;
         justify-content: center;
-        position: relative;
-        left: 20px;
+        margin-right: -70px;
         p {
             font-weight: bold;
             position: relative;
-            top: 17px;
+            top: 10px;
+            
             font-weight: 400;
             font-size: 13px;
+            
         }
     }
     &__panier {
